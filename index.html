@@ -20,5 +20,37 @@
 <img src="imagen1.png" alt="No se encontro la imagen">
 </div>
 
+<h2>Ejemplo de Javascript</h2>
+
+<p>Ingresar un numero entre 1 y 10</p>
+
+<input id="num">
+<button type="button" onclick="funcion1()">Enviar</button>
+
+<p id="demo"></p>
+<input id="num">
+<p id="numero"></p>
+
+<script>
+    function funcion1() {
+        //Toma el valor del input con el id="num" y lo guarda en la variable x
+        let x = document.getElementById("num").value;
+        //Chequea el valor ingresado
+        let text;
+        if (isNaN(x) || x < 1 || x > 10) // Tengo tres condiciones conq ue una sea verdadera entra al if
+        {    // isNan(x) pregunta si no es un nro
+            text = "Ingreso no valido";
+        }
+        else
+        {
+            text = "Ingreso valido";
+        }
+
+        x = x+1
+        document.getElementById("demo").innerHTML = text;
+        document.getElementById("numero").innerHTML = x;
+    }
+</script>
+
 </body>
 </html>
